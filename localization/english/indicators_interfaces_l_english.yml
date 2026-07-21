@@ -1,0 +1,11 @@
+﻿l_english:
+ GDP_GROWTH_RATE_SHORT:0 "[Concept('concept_gdp_growth_rate', '$concept_gdp_growth_rate_short$')]"
+
+ INDICATORS_GDP_TOOLTIP:0 "Start-of-Year $GDP_SHORT$: #variable @money![Country.MakeScope.Var('year_start_gdp').GetValue|Dv]#!\n$TOOLTIP_DELIMITER$\nAnnual projected $GDP_GROWTH_RATE_SHORT$: #variable [Country.MakeScope.Var('gdp_growth_rate').GetValue|+=%2]#! ($RANKING_BY_GDP_GROWTH_RATE$)\n$GDP_GROWTH_RATE_SHORT$ this year: #variable [Country.MakeScope.Var('real_gdp_growth_rate').GetValue|+=%2]#! (#variable @money![Country.MakeScope.Var('gdp_diff').GetValue|=Dv]#!)\n$GDP_GROWTH_RATE_SHORT$ last year: #variable [Country.MakeScope.Var('last_year_gdp_growth_rate').GetValue|+=%2]#!"
+
+ RANKING_BY_GDP_GROWTH_RATE:0 "#tooltippable;tooltip:[Country.GetTooltipTag],RANKING_BY_GDP_GROWTH_RATE_TOOLTIP $RANKING_BY_GDP_GROWTH_RATE_TOOLTIP_TEXT$#!"
+ RANKING_BY_GDP_GROWTH_RATE_TOOLTIP:0 "$RANKING_BY_GDP_GROWTH_RATE_TOOLTIP_HEADER$\n[GetScriptedGui('ranking_by_gdp_growth_rate_sgui').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+ RANKING_BY_GDP_GROWTH_RATE_TOOLTIP_HEADER:0 "Annual Projected $GDP_GROWTH_RATE_SHORT$ of Top 10 Economies"
+ RANKING_BY_GDP_GROWTH_RATE_SGUI_CUSTOM_TOOLTIP:0 "[THIS.Var('ranking_by_gdp_growth_rate').GetValue]. [THIS.Var('gdp_growth_rate').GetValue|+=%2] (#variable @money![THIS.Var('gdp_net_growth').GetValue|=Dv]#!) - [THIS.GetCountry.GetName]"
+ RANKING_BY_GDP_GROWTH_RATE_TOOLTIP_TEXT:0 "[SelectLocalization(GreaterThan_CFixedPoint(Country.MakeScope.Var('ranking_by_gdp_growth_rate').GetValue, '(CFixedPoint)0'), 'RANKING_BY_GDP_GROWTH_RATE_VALUE', 'NOT_AVAILABLE')]"
+ RANKING_BY_GDP_GROWTH_RATE_VALUE:0 "#white ##[Country.MakeScope.Var('ranking_by_gdp_growth_rate').GetValue]#!"

@@ -1,0 +1,15 @@
+﻿# Zero Balance Mod: religious power bloc identity change. zz_ loads last.
+# Goal: replace the +5% birth rate on the religious identity with church (devout) approval and
+# state-religion acceptance.
+# Why INJECT (not REPLACE): identity_religious carries a long, patch-sensitive cohesion script.
+# Reproducing it via REPLACE would silently freeze that logic on game patches. INJECT only touches
+# member_modifier. Per docs/vic3-modding/02-override-strategies.md, same-key modifiers in one
+# definition STACK (sum), so injecting state_birth_rate_mult = -0.05 nets the vanilla +0.05 to 0
+# (effectively removed) without rebuilding the rest of the identity.
+INJECT:identity_religious = {
+	member_modifier = {
+		state_birth_rate_mult = -0.05                  # cancels vanilla +0.05 -> net 0
+		interest_group_ig_devout_approval_add = 2      # +2 church (devout) satisfaction
+		country_acceptance_state_religion_add = 10     # +10 acceptance for state-religion pops
+	}
+}

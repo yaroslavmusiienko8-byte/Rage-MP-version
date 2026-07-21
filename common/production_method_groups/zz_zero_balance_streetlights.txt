@@ -1,0 +1,15 @@
+﻿# Zero Balance Mod: insert pm_oil_streetlights into the Urban Center lighting group.
+# REPLACE: (not INJECT) is used here only to control ORDER — INJECT appends to the list, which would
+# place oil after electric (implying it is the most advanced tier). REPLACE lets us slot oil between
+# gas and electric, matching its 6-services power. The texture and the other three PMs are vanilla.
+# NOTE: full-list replace means a future patch adding a new vanilla lighting PM would be dropped here
+# until this list is re-synced.
+REPLACE:pmg_street_lighting = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_street_lighting
+		pm_gas_streetlights
+		pm_oil_streetlights
+		pm_electric_streetlights
+	}
+}

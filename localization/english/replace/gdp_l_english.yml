@@ -1,0 +1,8 @@
+﻿l_english:
+    GDP_TOOLTIP: "#header [concept_gdp]#!\n[Country.GetAdjective] current $GDP_SHORT$: #N @money![Country.GetGDP|Dv]#! (#u #tooltippable #tooltip:[Country.GetTooltipTag],COUNTRY_GDP_OWNERSHIP_TOOLTIP [Country.GetDomesticallyOwnedGDPFraction|%1b]#!#!#!)  ([Country.GetGDPRanking])\n$ULTIMATE_GDP$\n$TOOLTIP_DELIMITER$\nGDP per Capita: #variable @money![Country.GetGDPPerCapita|2*]#! ([Country.GetGDPPerCapitaRanking])\n\n"
+
+    ULTIMATE_GDP: "$INDICATORS_GDP_TOOLTIP$\n$MONTHLY_CHANGE$\n$TOOLTIP_DELIMITER$\n$LARP_EXTRACTED$  "
+
+    LARP_EXTRACTED: "[Country.GetAdjective] $GDP_SHORT$ is [Country.MakeScope.ScriptValue('larp_global_gdp_percent')|%v2] of Global GDP\nGlobal GDP: @money![Country.MakeScope.ScriptValue('larp_global_gdp')|Dv]"
+
+    MONTHLY_CHANGE: "$GDP_GROWTH_RATE_SHORT$ this month: #variable [Country.MakeScope.Var('monthly_gdp_growth_rate').GetValue|+=%2]#! (#variable @money![Country.MakeScope.Var('monthly_gdp_diff').GetValue|=Dv]#!)\n"

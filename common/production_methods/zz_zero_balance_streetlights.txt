@@ -1,0 +1,32 @@
+﻿# Zero Balance Mod: new Urban Center street-lighting method "Oil Streetlights".
+# Additive new definition (brand-new key) — no override needed here. It is slotted into the
+# vanilla pmg_street_lighting group in production_method_groups/zz_zero_balance_streetlights.txt.
+# Economic core per request: 3 oil in -> 6 services out. Employment (laborers) and state
+# infrastructure mirror the sibling pm_gas_streetlights so the building staffs and behaves like the
+# other combustion-lighting option; oil sits between gas (2 coal -> 5 services) and electric
+# (3 electricity -> 10 services). Reuses the gas icon and warm city-lights color index (no bespoke
+# oil art exists in vanilla).
+pm_oil_streetlights = {
+	texture = "gfx/interface/icons/production_method_icons/gas_streetlights.dds"
+
+	city_lights_color_index = 1	# Warm light, same array index as gas streetlights
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_oil_add = 3
+			goods_output_services_add = 6
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 250
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 1
+		}
+	}
+
+	required_input_goods = oil
+}

@@ -1,0 +1,403 @@
+﻿ZAN = { 
+	color = { 255 164 7 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { swahili }
+	capital = STATE_KENYA
+}
+
+WTU = { # Witu/Wituland/Sultanate of Pate in exile
+	color = { 255 164 7 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { swahili }
+	capital = STATE_KENYA
+}
+
+MBS = { # Mombasa
+	color = { 127 177 72 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { swahili }
+	religion = ibadi			
+	capital = STATE_KENYA
+	is_named_from_capital = yes
+}
+
+
+TGI = { # Tungi
+	color = { 72 92 12 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { swahili }
+	capital = STATE_MOCAMBIQUE
+}
+
+AGC = { # Angoche
+	color = { 255 180 0 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { swahili }
+	capital = STATE_MOCAMBIQUE
+}
+
+GZA = {
+	color = { 191 154 108 }
+
+	country_type = decentralized
+
+	tier = kingdom
+
+	cultures = { nguni }
+	capital = STATE_LOURENCO_MARQUES
+}
+
+TRN = {
+	color = { 140  183  154 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { boer }
+	capital = STATE_TRANSVAAL
+	is_named_from_capital = yes
+}
+
+
+SWZ = {
+	color = { 255 217 0 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { nguni }
+	capital = STATE_TRANSVAAL
+}
+
+WBL = {
+	color = { 122 105 77 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { griqua }
+	capital = STATE_NORTHERN_CAPE
+}
+
+PHL = {
+	color = { 176 176 131 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { griqua }
+	capital = STATE_VRYSTAAT
+}
+
+BST = {
+	color = { 137 106 217 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { sotho }
+	capital = STATE_ZULULAND
+}
+
+ZUL = {
+	color = { 204  186  201 }
+
+	country_type = decentralized
+
+	tier = kingdom
+
+	cultures = { zulu }
+	capital = STATE_ZULULAND
+	is_named_from_capital = yes
+}
+
+ORA = {
+	color = { 224 139 47 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { boer }
+	capital = STATE_VRYSTAAT
+	is_named_from_capital = yes
+}
+KON = {
+	color = { 199 160 139 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	religion = catholic
+
+	cultures = { bakongo }
+	capital = STATE_BAS_CONGO
+ }
+
+FTR = {
+	color = { 115 204 102 }
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { fulbe wolof }
+	capital = STATE_SENEGAL
+}
+
+KRT = {
+	color = { 127 28 45 }
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { bambara }
+	capital = STATE_WESTERN_MALI
+}
+
+FTJ = {
+	color = { 230 125 127 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { fulbe }
+	capital = STATE_GUINEA
+}
+
+SGU = {
+	color = { 27 28 145 }
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { bambara }
+	capital = STATE_WESTERN_MALI
+}
+
+MSN = {
+	color = { 230 231 62 }
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { fulbe }
+	capital = STATE_EASTERN_MALI
+}
+
+ASH = {
+	color = { 97 98 195 }
+
+	country_type = decentralized
+
+	tier = kingdom
+
+	cultures = { akan }
+	capital = STATE_GHANA
+}
+
+DAH = {
+	color = { 11 84 179 }
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { fon }
+	capital = STATE_DAHOMEY
+}
+
+OYO = {
+	color = { 211 184 179 }
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { yoruba }
+	capital = STATE_YORUBA_STATES
+}
+
+BEN = {
+	color = { 110 173 129 }
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { edo }
+	capital = STATE_BENIN
+}
+
+BRG = {
+	color = { 218 231 235 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { mande fulbe }
+	capital = STATE_HAUSALAND
+}
+
+SOK = {
+	color = { 0 135 81 }
+
+	country_type = decentralized
+
+	tier = kingdom
+
+	cultures = { hausa fulbe }
+	capital = STATE_HAUSALAND
+}
+
+HAU = {
+	color = { 225 185 85 }
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { hausa }
+	capital = STATE_OUTER_HAUSALAND
+}
+
+BOR = {
+	color = { 30 131 162 }
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { kanuri }
+	capital = STATE_BORNU
+}
+
+BGI = {
+	color = { 64 124 157 }
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { baguirmi }
+	capital = STATE_WADDAI
+}
+
+WAD = {
+	color = { 194 66 41 }
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { fur }
+	capital = STATE_WADDAI
+}
+
+DFR = {
+	color = { 44 160 70 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { fur bedouin }
+	capital = STATE_DARFUR
+}
+
+ACH = {
+	color = { 166 225 217 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { luo lacustrine_bantu }
+	capital = STATE_UGANDA
+}
+
+BNY = {
+	color = { 174 24 66 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { baganda lacustrine_bantu }
+	capital = STATE_UGANDA
+}
+
+BUG = {
+	color = { 21 21 227 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { baganda }
+	capital = STATE_UGANDA
+}
+
+ANK = {
+	color = { 126 162 98 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { baganda lacustrine_bantu }
+	capital = STATE_UGANDA
+}
+
+RWD = {
+	color = { 213 160 18 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { ruanda }
+	capital = STATE_TANGANYIKA
+}
+
+KRG = {
+	color = { 48 177 169 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { lacustrine_bantu baganda }
+	capital = STATE_TANGANYIKA
+}
+
+BRD = {
+	color = { 21 191 16 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { rundi }
+	capital = STATE_TANGANYIKA
+}
