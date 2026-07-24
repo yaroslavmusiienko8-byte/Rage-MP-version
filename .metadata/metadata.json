@@ -1,13 +1,17 @@
 {
-  "name" : "Rage MP version",
-	"id" : "",
+  "name": "Rage MP Version",
+  "id": "",
+  "version": "1.0",
+  "game_id": "victoria3",
   "picture": "thumbnail.png",
-  "version" : "",
-  "supported_game_version" : "",
-  "short_description" : "",
-  "tags" : [],
-  "relationships" : [],
-  "game_custom_data" : {
-    "multiplayer_synchronized" : true
+  "supported_game_version": "1.13.*",
+  "short_description": "Multiplayer balance mod from Ukraine strategy games community Rage Kingdom",
+  "tags": [
+    "multiplayer",
+    "balance"
+  ],
+  "relationships": [],
+  "game_custom_data": {
+    "multiplayer_synchronized": true
   }
 }
