@@ -510,7 +510,9 @@ rubber_mastication = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/rubber.dds"
 	category = production
-
+	modifier = {
+		state_colony_growth_creation_factor = 0.05		#added 0.05 to colony growth creation factor
+	}
 	unlocking_technologies = {
 		fractional_distillation
 		chemical_bleaching
@@ -965,6 +967,9 @@ plastics = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/plastics.dds"
 	category = production
+	modifier = {
+		state_colony_growth_creation_factor = 0.05		#added 0.05 to colony growth creation factor
+	}
 
 	unlocking_technologies = {
 		reinforced_concrete

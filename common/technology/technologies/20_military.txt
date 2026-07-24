@@ -505,7 +505,9 @@ military_statistics = {
 
 	modifier = {
 		military_formation_organization_gain_mult = 0.2
+		state_colony_growth_creation_factor = 0.05			#added 0.05 colony growth creation factor to military_statistics tech
 	}
+	
 
 	unlocking_technologies = {
 		electric_telegraph
@@ -626,6 +628,9 @@ ironclad_tech = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/ironclad_tech.dds"
 	category = military
+	modifier = {
+		state_colony_growth_creation_factor = 0.05		#added 0.05 colony growth creation factor to ironclad_tech tech
+	}
 
 	unlocking_technologies = {
 		screw_frigate
