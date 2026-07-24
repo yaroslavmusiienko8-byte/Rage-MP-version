@@ -1,4 +1,0 @@
-﻿l_english:
- concept_gdp_growth_rate:0 "Gross Domestic Product Growth Rate"
- concept_gdp_growth_rate_short:0 "GDP Growth Rate"
- concept_gdp_growth_rate_desc:0 "The annualized change in the [concept_gdp] of your [concept_country]. It reflects changes in the total output produced by [Concept('concept_pop','$concept_pops$')] employed across all [Concept('concept_building','$concept_buildings$')], shaped by [concept_pop_growth], investment through [concept_construction] and advanced [Concept('concept_production_method','$concept_production_methods$')]. Sustained [Concept('concept_gdp_growth_rate','$concept_gdp_growth_rate_short$')] can influence the growth rate of $concept_credit_limit$ and the number of [Concept('concept_loyalist','$concept_loyalists$')] and [Concept('concept_radical','$concept_radicals$')]."
