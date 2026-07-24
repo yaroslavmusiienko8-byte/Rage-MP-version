@@ -24,7 +24,7 @@ interest_tier_observant = {
 	leverage_generation_mult = -0.25
 	min_involvement = 100
 	max_involvement = 1000
-	colonization = yes #allows colonization at tier 1 involvment into region (balance for countries which doesnt have a fleet)
+	colonization = yes 			#allows colonization at tier 1 involvment into region (balance for countries which doesnt have a fleet)
 
 	on_activate = {
 		custom_tooltip_no_bullet = interest_tier_effect_infamy_cost_increase_high
