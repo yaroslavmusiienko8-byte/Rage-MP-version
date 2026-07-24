@@ -1,5 +1,5 @@
 # Rage-MP-version
-Multiplayer balance mod from Ukraine strategy games community Rege Kingdom for Victoria 3
+Multiplayer balance mod from Ukraine strategy games community Rage Kingdom for Victoria 3
 
 ## Links
 
