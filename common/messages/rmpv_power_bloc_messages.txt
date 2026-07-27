@@ -1,0 +1,17 @@
+﻿power_bloc_identity_change_third_party = {
+	type = power_bloc
+	group = "power_bloc_formation"
+
+	texture = "gfx/interface/icons/notification_icons/power_bloc.dds"
+
+	notification_type = toast
+}
+
+power_bloc_identity_change = {
+	type = power_bloc
+	group = "power_bloc_formation"
+
+	texture = "gfx/interface/icons/notification_icons/power_bloc.dds"
+
+	notification_type = toast
+}

@@ -1,0 +1,7 @@
+﻿rmpv_power_bloc_rule_enable_identity_switch = {
+	default = rmpv_power_bloc_rule_enable_identity_switch_enabled
+
+	rmpv_power_bloc_rule_enable_identity_switch_enabled = {}
+
+	rmpv_power_bloc_rule_enable_identity_switch_disabled = {}
+}
