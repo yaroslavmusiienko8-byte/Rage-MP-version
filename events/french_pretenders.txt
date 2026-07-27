@@ -2221,6 +2221,73 @@ french_pretenders.6 = { # Second Republic
 	}
 }
 
+rench_pretenders.8 = { # Second Republic non radical
+	type = country_event
+	placement = ROOT
+
+	title = french_pretenders.8.t
+	desc = french_pretenders.8.d
+	flavor = french_pretenders.8.f
+
+	event_image = {
+		video = "votp_realist_household"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	dlc = dlc004
+
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		# Triggered by JE
+	}
+	immediate = {
+		ruler = {
+			save_scope_as = old_ruler_scope
+		}
+		springtime_save_conservative_laws = yes
+
+		set_variable = had_springtime_revolution
+		scope:old_ruler_scope ?= {
+			exile_character_with_martyrdom = yes
+		}
+	}
+	option = {
+		name = french_pretenders.8.a
+		default_option = yes
+		custom_tooltip = {
+			text = exile_old_ruler_tt
+		}
+		set_variable = france_had_revolution
+		random_interest_group = {
+			limit = {
+				ig_counts_as_marginal = no
+				law_stance = {
+					law = law_type:law_presidential_republic
+					value > neutral
+				}
+			}
+			leader = {
+				set_character_as_ruler = yes
+			}
+		}
+		if = {
+			limit = {
+				country_has_voting_franchise = yes
+				in_election_campaign = no
+			}
+			call_election = {
+				months = 3
+			}
+		}
+		trigger_event = { id = peoples_springtime.10 days = 7 popup = yes }
+	}
+}
 
 french_pretenders.7 = { # Choose dynasty
 	type = country_event
