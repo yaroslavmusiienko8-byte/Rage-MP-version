@@ -1,0 +1,7 @@
+﻿rmpv_second_republic_establish_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_legitimacy_base_add = 15
+
+	state_loyalists_from_political_movements_mult = 0.10
+	state_radicals_from_political_movements_mult = -0.10
+}

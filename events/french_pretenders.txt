@@ -2263,7 +2263,6 @@ rench_pretenders.8 = { # Second Republic non radical
 		custom_tooltip = {
 			text = exile_old_ruler_tt
 		}
-		set_variable = france_had_revolution
 		random_interest_group = {
 			limit = {
 				ig_counts_as_marginal = no
@@ -2285,7 +2284,24 @@ rench_pretenders.8 = { # Second Republic non radical
 				months = 3
 			}
 		}
-		trigger_event = { id = peoples_springtime.10 days = 7 popup = yes }
+
+		add_modifier = {
+			name = rmpv_second_republic_establish_modifier
+			years = 5
+			is_decaying = yes
+		}
+
+		every_country_in_europe = {
+			limit = {
+				country_rank >= rank_value:major_power
+				NOT = { this = root }
+			}
+
+			change_relations = {
+				country = root
+				value = -30
+			}
+		}
 	}
 }
 
