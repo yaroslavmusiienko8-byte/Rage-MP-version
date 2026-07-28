@@ -3,3 +3,10 @@
   french_pretenders.8.d: "The crisis throughout [ROOT.GetCountry.GetName] has proven too much for [SCOPE.sCharacter('old_ruler_scope').GetFullName] to handle. [SCOPE.sCharacter('monarch_scope').GetSheHe|U] has been forced to abdicate and flee the country, and a provisional republican government has been declared."
   french_pretenders.8.f: ""From that day, a thousand strange systems issued impetuously from the minds of the innovators, and spread through the troubled minds of the crowd. Everything was still standing except royalty and parliament, and it seemed that from the shock of the revolution, society itself had been reduced to dust, and that the new form that should be given to society had been put to competition."\n\n— Alexis de Tocqueville"
   french_pretenders.8.a: "Long live the Republic!"
+  french_pretenders.9.t: "The Second Republic Secured"
+  french_pretenders.9.d: "The institutions of the Second Republic have survived their first great trials. Monarchist factions remain divided, republican government has taken root, and the prospect of an immediate restoration has begun to fade."
+  french_pretenders.9.f: "\"The Republic is no longer a temporary settlement born from revolution. It is now the lawful government of France.\""
+
+  french_pretenders.9.a: "The Republic shall endure."
+
+  rmpv_second_republic_is_secure: "The Second Republic is firmly established and its institutions are secure."

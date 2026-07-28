@@ -5,3 +5,14 @@
 	state_loyalists_from_political_movements_mult = 0.10
 	state_radicals_from_political_movements_mult = -0.10
 }
+
+rmpv_second_republic_cemented_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+
+	state_loyalists_from_political_movements_mult = 0.10
+
+	# New Elan
+	unit_morale_damage_mult = 0.10
+	unit_morale_loss_mult = -0.20
+	unit_recovery_rate_add = 0.10
+}

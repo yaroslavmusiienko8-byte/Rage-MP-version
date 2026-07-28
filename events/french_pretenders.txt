@@ -2221,7 +2221,7 @@ french_pretenders.6 = { # Second Republic
 	}
 }
 
-rench_pretenders.8 = { # Second Republic non radical
+french_pretenders.8 = { # Second Republic non radical
 	type = country_event
 	placement = ROOT
 
@@ -2301,6 +2301,51 @@ rench_pretenders.8 = { # Second Republic non radical
 				country = root
 				value = -30
 			}
+		}
+	}
+}
+
+french_pretenders.9 = { # Second Republic cemented
+	type = country_event
+	placement = ROOT
+
+	title = french_pretenders.9.t
+	desc = french_pretenders.9.d
+	flavor = french_pretenders.9.f
+
+	event_image = {
+		video = "votp_realist_household"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	dlc = dlc004
+
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		# Triggered by JE
+	}
+
+	immediate = {
+		# null
+	}
+	option = {
+		name = french_pretenders.9.a
+		default_option = yes
+
+		custom_tooltip = {
+			text = rmpv_second_republic_is_secure
+		}
+
+		add_modifier = {
+			name = rmpv_second_republic_cemented_modifier
+
+			years = 15
 		}
 	}
 }
