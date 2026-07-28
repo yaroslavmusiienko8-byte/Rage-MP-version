@@ -835,7 +835,10 @@ on_monthly_pulse_country = {
 				country_rank >= rank_value:major_power
 				OR = {
 					AND = {
-						game_date >= 1845.1.1	# protection from Radical Labrador
+						game_date >= 1849.3.1	# guaranteed trigger for springtime
+					}
+					AND = {
+						game_date >= 1844.1.1	# protection from Radical Labrador
 						country_has_springtime_revolution = {
 							THRESHOLD = 0.25
 						}
