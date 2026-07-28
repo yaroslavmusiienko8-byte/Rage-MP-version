@@ -216,7 +216,7 @@
 
 	fail = {
 		country_has_springtime_revolution = {
-			THRESHOLD = 0.50
+			THRESHOLD = 0.80
 		}
 	}
 

@@ -1,6 +1,6 @@
 ﻿# triggered by on_law_enactment_started
 
-REPLASE_OR_CREATE:je_abolish_monarchy = {
+REPLACE_OR_CREATE:je_abolish_monarchy = {
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
 	group = je_group_internal_affairs
@@ -75,11 +75,11 @@ REPLASE_OR_CREATE:je_abolish_monarchy = {
 
 		if = {
 			limit = {
-				this = c:FRA
+				c:FRA = this
 			}
 			trigger_event = {
 				id = french_pretenders.9
-				days = 14
+				days = 7
 				popup = yes
 			}
 		}
