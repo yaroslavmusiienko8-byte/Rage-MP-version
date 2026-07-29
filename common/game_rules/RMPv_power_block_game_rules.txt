@@ -5,3 +5,45 @@
 
 	rmpv_power_bloc_rule_enable_identity_switch_disabled = {}
 }
+
+rmpv_power_bloc_rule_max_saved_mandates = {
+	default = rmpv_power_bloc_rule_max_saved_mandates_9
+
+	rmpv_power_bloc_rule_max_saved_mandates_3 = {}
+
+	rmpv_power_bloc_rule_max_saved_mandates_6 = {}
+
+	rmpv_power_bloc_rule_max_saved_mandates_9 = {}
+
+	rmpv_power_bloc_rule_max_saved_mandates_12 = {}
+
+	rmpv_power_bloc_rule_max_saved_mandates_15 = {}
+}
+
+rmpv_power_bloc_rule_principle_slots = {
+	default = rmpv_power_bloc_rule_principle_slots_8
+
+	rmpv_power_bloc_rule_principle_slots_4 = {}
+
+	rmpv_power_bloc_rule_principle_slots_6 = {}
+
+	rmpv_power_bloc_rule_principle_slots_8 = {}
+
+	rmpv_power_bloc_rule_principle_slots_10 = {}
+
+	rmpv_power_bloc_rule_principle_slots_12 = {}
+}
+
+rmpv_power_bloc_rule_mandate_progress_speed = {
+	default = rmpv_power_bloc_rule_mandate_progress_speed_100
+
+	rmpv_power_bloc_rule_mandate_progress_speed_50 = {}
+
+	rmpv_power_bloc_rule_mandate_progress_speed_75 = {}
+
+	rmpv_power_bloc_rule_mandate_progress_speed_100 = {}
+
+	rmpv_power_bloc_rule_mandate_progress_speed_150 = {}
+
+	rmpv_power_bloc_rule_mandate_progress_speed_200 = {}
+}

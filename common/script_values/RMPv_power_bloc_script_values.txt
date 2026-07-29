@@ -1,14 +1,13 @@
-﻿power_bloc_identity_change_mandates = {
+﻿power_bloc_identity_change_mandates_refund = {
 	power_bloc = {
 		add = total_used_principle_levels
 		divide = 2
 		add = num_mandates
 	}
 	floor = yes
-	max = power_bloc_preserved_principles_switch
 }
 
-power_bloc_identity_change_mandates_tt = {
+power_bloc_identity_change_mandates_refund_tt = {
 	power_bloc = {
 		add = total_used_principle_levels
 		divide = 2
@@ -16,9 +15,7 @@ power_bloc_identity_change_mandates_tt = {
 	}
 	floor = yes
 	subtract = 1
-	add = power_bloc_free_founding_mandates
 	min = 0
-	max = power_bloc_preserved_principles_switch
 }
 
 power_bloc_preserved_principles_switch = {
@@ -27,7 +24,6 @@ power_bloc_preserved_principles_switch = {
 	divide = 2
 	add = power_bloc_max_mandates_rule_value
 	subtract = 1
-	subtract = power_bloc_free_founding_mandates
 }
 
 power_bloc_preserved_principles_switch_tt = {
@@ -36,4 +32,115 @@ power_bloc_preserved_principles_switch_tt = {
 	divide = 2
 	add = power_bloc_max_mandates_rule_value
 	subtract = 1
+}
+
+REPLACE_OR_CREATE:power_bloc_mandate_progress_by_rank = {
+	value = {
+		value = 6
+		subtract = power_bloc_rank
+		min = 1
+		desc = "POWER_BLOC_MANDATE_PROGRESS_BASE"
+	}
+
+	if = {
+		limit = {
+			NOT = {has_modifier = rmpv_mandates_refund_modefier}
+			power_bloc_great_power_non_leader_members > 0
+			power_bloc_mandate_progress_per_great_power_member != 0
+		}
+		add = {
+			value = power_bloc_great_power_non_leader_members
+			multiply = power_bloc_mandate_progress_per_great_power_member
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_GREAT_POWER_MEMBERS"
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {has_modifier = rmpv_mandates_refund_modefier}
+			power_bloc_major_power_non_leader_members > 0
+			power_bloc_mandate_progress_per_major_power_member != 0
+		}
+		add = {
+			value = power_bloc_major_power_non_leader_members
+			multiply = power_bloc_mandate_progress_per_major_power_member
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_MAJOR_POWER_MEMBERS"
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {has_modifier = rmpv_mandates_refund_modefier}
+			power_bloc_minor_power_non_leader_members > 0
+			power_bloc_mandate_progress_per_minor_power_member != 0
+		}
+		add = {
+			value = power_bloc_minor_power_non_leader_members
+			multiply = power_bloc_mandate_progress_per_minor_power_member
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_MINOR_POWER_MEMBERS"
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {has_modifier = rmpv_mandates_refund_modefier}
+			power_bloc_unrecognized_major_power_non_leader_members > 0
+			power_bloc_mandate_progress_per_unrecognized_major_power_member != 0
+		}
+		add = {
+			value = power_bloc_unrecognized_major_power_non_leader_members
+			multiply = power_bloc_mandate_progress_per_unrecognized_major_power_member
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_UNRECOGNIZED_MAJOR_POWER_MEMBERS"
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {has_modifier = rmpv_mandates_refund_modefier}
+			power_bloc_unrecognized_regional_power_non_leader_members > 0
+			power_bloc_mandate_progress_per_unrecognized_regional_power_member != 0
+		}
+		add = {
+			value = power_bloc_unrecognized_regional_power_non_leader_members
+			multiply = power_bloc_mandate_progress_per_unrecognized_regional_power_member
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_UNRECOGNIZED_REGIONAL_POWER_MEMBERS"
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {has_modifier = rmpv_mandates_refund_modefier}
+			power_bloc_unrecognized_power_non_leader_members > 0
+			power_bloc_mandate_progress_per_unrecognized_power_member != 0
+		}
+		add = {
+			value = power_bloc_unrecognized_power_non_leader_members
+			multiply = power_bloc_mandate_progress_per_unrecognized_power_member
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_UNRECOGNIZED_POWER_MEMBERS"
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {has_modifier = rmpv_mandates_refund_modefier}
+			power_bloc_insignificant_power_non_leader_members > 0
+			power_bloc_mandate_progress_per_insignificant_power_member != 0
+		}
+		add = {
+			value = power_bloc_insignificant_power_non_leader_members
+			multiply = power_bloc_mandate_progress_per_insignificant_power_member
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_INSIGNIFICANT_POWER_MEMBERS"
+		}
+	}
+
+	# Refund mandates during (Mnadats_used/2 + num_mandts) * weeks
+	if = {
+		limit = {
+			has_modifier = rmpv_mandates_refund_modefier}
+		}
+		add = {
+			desc = "POWER_BLOC_FREE_FOUNDING_MANDATES"
+			add = define:NPowerBlocs|MAX_MANDATE_PROGRESS
+		}
+	}
 }

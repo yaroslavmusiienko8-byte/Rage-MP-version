@@ -1,8 +1,12 @@
 ﻿l_english:
+  rmpv_free_mandates_modifier: "Free Mandates"
+  power_bloc_identity_change_mandates_refund: "[GetPlayer.MakeScope.ScriptValue('power_bloc_identity_change_mandates_refaund_tt')]"
+  power_bloc_identity_change_mandates_refund_tt: "Half of your currently selected principles (rounded down) and your current available mandates and any free mandates you are entitled to, up to [GetPlayer.MakeScope.ScriptValue('power_bloc_identity_change_mandates_refund')]."
+
   SWITCH_POWER_BLOC_IDENTITY: "Switch Identity"
   SWITCH_POWER_BLOC_IDENTITY_TT: "Allows you to reselect the identity of the [GetPlayer.GetPowerBloc.GetName]."
   POWER_BLOC_RESELECT_IDENTITY_TITLE: "Select a new identity"
   power_bloc_confirm_switch_identity: "Are you sure you wish to switch to this identity?"
-  power_bloc_confirm_switch_identity_tt: "You will gain #tooltippable;tooltip:[ROOT.GetCountry.GetTooltipTag],saved_mandate_tt $saved_mandate$#! mandates at the start of the next week.\n\nYou will keep all [Concept('concept_power_bloc_member', 'Power Bloc Members')], though leverage with non-members will reset and leverage advantage over members will be reduced by 70%.\n\nCohesion will be set to 0, and you will lose 30 [concept_relations] with all members. All subjects gain 30 [concept_liberty_desire]."
+  power_bloc_confirm_switch_identity_tt: "You will gain #tooltippable;tooltip:[ROOT.GetCountry.GetTooltipTag],  power_bloc_identity_change_mandates_refund_tt $rmpv_saved_available_mandates$#! mandates at the start of the next week.\n\nYou will keep all [Concept('concept_power_bloc_member', 'Power Bloc Members')], though leverage with non-members will reset and leverage advantage over members will be reduced by 70%.\n\nCohesion will be set to 0, and you will lose 30 [concept_relations] with all members. All subjects gain 30 [concept_liberty_desire]."
   FORM_POWER_BLOC_CONFIRM_REFORM_BUTTON_TOOLTIP: "Your power bloc [concept_power_bloc] adopts new identity."
   REFORM_THIS_POWER_BLOC: "Reform into [concept_power_bloc]."

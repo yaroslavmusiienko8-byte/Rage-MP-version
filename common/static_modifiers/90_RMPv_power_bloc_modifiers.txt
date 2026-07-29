@@ -1,0 +1,6 @@
+﻿# PB modifiers
+rmpv_mandates_refund_modefier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	power_bloc_free_mandates_from_reform = 1
+
+}
