@@ -1,0 +1,92 @@
+﻿REPLACE_OR_CREATE:unlock_power_bloc_principle_slot_1 = {
+	always = yes
+}
+
+REPLACE_OR_CREATE:unlock_power_bloc_principle_slot_2 = {
+	hidden_trigger = {
+		has_dlc_feature = power_bloc_features
+	}
+}
+
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_3_DURING_FORMATION
+REPLACE_OR_CREATE:unlock_power_bloc_principle_slot_3 = {
+	hidden_trigger = {
+		has_dlc_feature = power_bloc_features
+	}
+	OR = {
+		hidden_trigger = {
+			used_principle_slots >= 3
+		}
+		AND = {
+			power_bloc_rank <= 5
+		}
+	}
+}
+
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION
+REPLACE_OR_CREATE:unlock_power_bloc_principle_slot_4 = {
+	hidden_trigger = {
+		has_dlc_feature = power_bloc_features
+	}
+	OR = {
+		hidden_trigger = {
+			used_principle_slots >= 4
+		}
+		AND = {
+			power_bloc_rank <= 5
+		}
+	}
+}
+
+REPLACE_OR_CREATE:unlock_power_bloc_principle_slot_5 = {
+	hidden_trigger = {
+		has_dlc_feature = power_bloc_features
+	}
+	OR = {
+		hidden_trigger = {
+			used_principle_slots >= 4
+		}
+		AND = {
+			power_bloc_rank <= 3
+		}
+	}
+}
+
+
+REPLACE_OR_CREATE:unlock_power_bloc_principle_slot_6 = {
+	hidden_trigger = {
+		has_dlc_feature = power_bloc_features
+	}
+	OR = {
+		hidden_trigger = {
+			used_principle_slots >= 5
+		}
+		AND = {
+			power_bloc_rank <= 1
+		}
+	}
+}
+
+REPLACE_OR_CREATE:unlock_power_bloc_formation_principle_slot_1 = {
+	always = yes
+}
+
+REPLACE_OR_CREATE:unlock_power_bloc_formation_principle_slot_2 = {
+	has_dlc_feature = power_bloc_features
+}
+
+REPLACE_OR_CREATE:unlock_power_bloc_formation_principle_slot_3 = {
+	has_dlc_feature = power_bloc_features
+}
+
+REPLACE_OR_CREATE:unlock_power_bloc_formation_principle_slot_4 = {
+	has_dlc_feature = power_bloc_features
+}
+
+REPLACE_OR_CREATE:unlock_power_bloc_formation_principle_slot_5 = {
+	has_dlc_feature = power_bloc_features
+}
+
+REPLACE_OR_CREATE:unlock_power_bloc_formation_principle_slot_6 = {
+	has_dlc_feature = power_bloc_features
+}
