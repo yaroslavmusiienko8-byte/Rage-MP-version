@@ -49,6 +49,13 @@ The mod focuses on improving multiplayer balance, reducing overpowered strategie
 2. **🇯🇵 Japan**
    - Adjust the ages and birth dates of emperors and shoguns to slightly accelerate the Meiji Restoration and Japan's modernization.
    - Allow Japan to complete its internal reforms earlier and begin participating in global politics sooner.
+3. **🇹🇷 Turkey**
+   - Rebalanced Turkiye JE.
+   - Changed JE criteria and debuffs.
+
+4. **🇨🇴 Grand Colombia**
+   - Changed formable path. 
+   - Faster Andeans Federation creation.
 
 ## 🤝 Contributing
 
