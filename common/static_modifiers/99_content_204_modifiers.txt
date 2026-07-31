@@ -1,0 +1,15 @@
+﻿REPLACE_OR_CREATE:modifier_andean_federation_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_society_tech_spread_mult = 0.15
+	state_construction_mult = 0.15
+	state_migration_pull_add = 1
+
+}
+
+REPLACE_OR_CREATE:modifier_andean_federation_military = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_prestige_from_army_power_projection_mult = 0.10
+	building_training_rate_mult = 0.25
+	country_supply_ship_construction_ratio_add = 0.25
+}
+
