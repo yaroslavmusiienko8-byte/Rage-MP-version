@@ -49,7 +49,7 @@ gran_colombia.1 = {
 			ROOT = {
 				create_incident = {
 					country = PREV
-					value = 10
+					value = 5
 				}
 			}
 		}
@@ -289,7 +289,7 @@ andean_federation.1 = {
 				ROOT = {
 					create_incident = {
 						country = PREV
-						value = 15
+						value = 5
 					}
 				}
 			}

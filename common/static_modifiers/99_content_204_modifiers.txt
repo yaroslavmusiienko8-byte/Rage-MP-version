@@ -13,3 +13,11 @@ REPLACE_OR_CREATE:modifier_andean_federation_military = {
 	country_supply_ship_construction_ratio_add = 0.25
 }
 
+REPLACE_OR_CREATE:modifier_founded_gran_colombia = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_mult = 0.15
+	country_influence_mult = 0.15
+	building_training_rate_mult = 0.25
+	country_prestige_from_army_power_projection_mult = 0.10
+	state_construction_mult = 0.15
+}
