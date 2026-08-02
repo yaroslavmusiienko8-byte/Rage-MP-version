@@ -208,7 +208,7 @@ banking = {
 		country_minting_mult = 0.1
 		country_loan_interest_rate_add = -0.02
 		state_max_trade_advantage_from_capacity_add = 0.05
-		state_capitalists_investment_pool_contribution_add = 0.05 # +5% change from static 
+		state_capitalists_investment_pool_contribution_add = 0.075 # +7.5% change from static 
 	}
 
 	unlocking_technologies = {
@@ -618,8 +618,8 @@ joint_stock_companies = {
 	modifier = {
 		country_max_companies_add = 1
 		state_urbanization_per_level_mult = -0.1
-		state_capitalists_investment_pool_contribution_add = 0.05 # +5% from stat 
-		state_aristocrats_investment_pool_contribution_add = 0.05 # +5% from stat
+		state_capitalists_investment_pool_contribution_add = 0.075 # +7.5% from stat 
+		state_aristocrats_investment_pool_contribution_add = 0.075 # +7.5% from stat
 	}
 
 	unlocking_technologies = {
