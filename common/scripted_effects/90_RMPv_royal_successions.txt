@@ -1,0 +1,238 @@
+﻿REPLACE_OR_CREATE:character_japan_ruler_succession_chain_effect = {
+	### Shogunate Successions
+	if = {
+		limit = {
+			has_template = JAP_ieyoshi_tokugawa
+		}
+		if = {
+			limit = {
+				has_dlc_feature = ep2_content
+			}
+			owner ?= {
+				trigger_event = { id = shogunate.1 popup = yes }
+			}
+		}
+		else = {
+			remove_trait = reserved
+			add_trait = imperious
+		}
+	}
+	else_if = {
+		limit = {
+			has_template = JAP_iesada_tokugawa
+		}
+		if = {
+			limit = {
+				has_dlc_feature = ep2_content
+			}
+			owner ?= {
+				trigger_event = { id = shogunate.3 popup = yes }
+			}
+		}
+		else = {
+			add_trait = tuberculosis
+		}
+	}
+	else_if = {
+		limit = {
+			has_template = JAP_iemochi_tokugawa
+		}
+		if = {
+			limit = {
+				has_dlc_feature = ep2_content
+			}
+			owner ?= {
+				trigger_event = { id = shogunate.6 popup = yes }
+			}
+		}
+		else = {
+			set_first_name = Iemochi
+		}
+	}
+	else_if = {
+		limit = {
+			has_template = JAP_yoshinobu_tokugawa
+		}
+		if = {
+			limit = {
+				has_dlc_feature = ep2_content
+			}
+			owner ?= {
+				trigger_event = { id = shogunate.4 popup = yes } # Earlier than Iemochi, because may appear earlier than historical
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_template = JAP_iesato_tokugawa
+		}
+		if = {
+			limit = {
+				has_dlc_feature = ep2_content
+			}
+			owner ?= {
+				trigger_event = { id = shogunate.7 popup = yes }
+			}
+		}
+	}
+	### Emperors handled in character_japan_imperial_succession_chain_effect
+}
+
+REPLACE_OR_CREATE:character_japan_imperial_succession_chain_effect = {
+	if = {
+		limit = {
+			has_template = JAP_ninko_yamato
+		}
+		owner = {
+			if = {
+				limit = {
+					has_dlc_feature = ep2_content
+				}
+				trigger_event = { id = japan_monarchy.1 }
+			}
+			else = {
+				if = {
+					limit = {
+						has_law = law_type:law_bakufu
+					}
+					create_character = {
+						template = JAP_komei_yamato
+						on_created = {
+							c:JAP ?= {
+								set_variable = { name = emperor_var value = PREV }
+							}
+							if = {
+								limit = {
+									c:JAP ?= { has_variable = one_emperor_one_era }
+								}
+								set_first_name = TenkyU_
+							}
+							else = {
+								set_first_name = Komei
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_template = JAP_komei_yamato
+			game_date >= 1842.11.3
+		}
+		owner = {
+			if = {
+				limit = {
+					has_dlc_feature = ep2_content
+				}
+				trigger_event = { id = japan_monarchy.2 }
+			}
+			else = {
+				if = {
+					limit = {
+						has_law = law_type:law_bakufu
+					}
+					create_character = {
+						template = JAP_meiji_yamato
+						on_created = {
+							c:JAP ?= {
+								set_variable = { name = emperor_var value = PREV }
+							}
+							set_first_name = Meiji
+						}
+					}
+					country_switch_sonnojoi_ideology = yes
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_template = JAP_meiji_yamato
+			game_date >= 1852.8.31
+		}
+		owner = {
+			if = {
+				limit = {
+					has_dlc_feature = ep2_content
+				}
+				trigger_event = { id = japan_monarchy.3 }
+			}
+			else = {
+				if = {
+					limit = {
+						has_law = law_type:law_bakufu
+					}
+					create_character = {
+						template = JAP_taisho_yamato
+						on_created = {
+							c:JAP ?= {
+								set_variable = { name = emperor_var value = PREV }
+							}
+							set_first_name = Taisho
+						}
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_template = JAP_taisho_yamato
+			game_date >= 1901.4.29
+		}
+		owner = {
+			if = {
+				limit = {
+					has_dlc_feature = ep2_content
+				}
+				trigger_event = { id = japan_monarchy.4 }
+			}
+			else = {
+				if = {
+					limit = {
+						has_law = law_type:law_bakufu
+					}
+					create_character = {
+						template = JAP_showa_yamato
+						on_created = {
+							c:JAP ?= {
+								set_variable = { name = emperor_var value = PREV }
+							}
+							set_first_name = Showa
+						}
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			owner ?= {
+				has_variable = emperor_var
+				var:emperor_var ?= ROOT # The character that has just died
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_bakufu
+				}
+			}
+			create_character = {
+				template = JAP_backup_emperor_template
+				on_created = {
+					c:JAP ?= {
+						set_variable = { name = emperor_var value = PREV }
+					}
+				}
+			}
+		}
+		else = {
+			owner ?= {
+				set_variable = { name = emperor_var value = ruler }
+			}
+		}
+	}
+}

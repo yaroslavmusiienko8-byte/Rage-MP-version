@@ -1,0 +1,227 @@
+﻿REPLACE_OR_CREATE:JAP_komei_yamato = {
+	first_name = "Osahito" # Later Komei
+	last_name = Yamato
+	historical = yes
+	noble = yes
+	birth_date = 1821.1.1
+	role = character_role_emperor_of_japan
+	dna = dna_emperor_komei
+	religion = rel:shinto
+	interest_group = ig_armed_forces
+	ideology = ideology_shojoi
+	home_region = STATE_KYOTO
+	traits = {
+		wrathful
+		sickly
+	}
+	on_created = {
+		set_variable = house_yamato
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_bakufu
+				}
+			}
+			add_trait = special_character_japanese_emperor
+		}
+	}
+}
+
+REPLACE_OR_CREATE:JAP_meiji_yamato = {
+	first_name = "Mutsuhito" # Later Meiji
+	last_name = "Yamato"
+	historical = yes
+	noble = yes
+	birth_date = 1840.1.1
+	role = character_role_emperor_of_japan
+	dna = dna_emperor_meiji
+	religion = rel:shinto
+	interest_group = ig_industrialists
+	ideology = ideology_modernizer_leader
+	home_region = STATE_KYOTO
+	traits = {
+		innovative
+		charismatic
+	}
+	on_created = {
+		set_variable = house_yamato
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_bakufu
+				}
+			}
+			add_trait = special_character_japanese_emperor
+		}
+	}
+}
+
+REPLACE_OR_CREATE:JAP_taisho_yamato = {
+	first_name = "Yoshihito" # Later Taisho
+	last_name = "Yamato"
+	historical = yes
+	noble = yes
+	birth_date = 1870.1.1
+	role = character_role_emperor_of_japan
+	dna = dna_taisho_yamato
+	religion = rel:shinto
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+	home_region = STATE_KANTO
+	traits = {}
+	on_created = {
+		set_variable = house_yamato
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_technology_researched = antibiotics }
+				}
+			}
+			add_trait = sickly
+		}
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_bakufu
+				}
+			}
+			add_trait = special_character_japanese_emperor
+		}
+	}
+}
+
+REPLACE_OR_CREATE:JAP_showa_yamato = {
+	first_name = "Hirohito" # Later Showa
+	last_name = "Yamato"
+	historical = yes
+	noble = yes
+	birth_date = 1901.1.1
+	role = character_role_emperor_of_japan
+	dna = dna_showa_yamato
+	religion = rel:shinto
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	home_region = STATE_KANTO
+	traits = {
+	}
+	on_created = {
+		set_variable = house_yamato
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_bakufu
+				}
+			}
+			add_trait = special_character_japanese_emperor
+		}
+	}
+}
+
+# Shoguns
+REPLACE_OR_CREATE:JAP_iesada_tokugawa = {
+	first_name = Iesada
+	last_name = Tokugawa
+	historical = yes
+	noble = yes
+	culture = cu:japanese
+	birth_date = 1818.5.6
+	dna = dna_iesada_tokugawa
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_KANTO
+	traits = {
+		reserved
+		sickly
+		scarred
+	}
+	on_created = {
+		set_variable = house_tokugawa
+	}
+}
+REPLACE_OR_CREATE:JAP_yoshiyori_tokugawa = { # Regent of Iemochi
+	first_name = Yoshiyori
+	last_name = Tokugawa
+	historical = yes
+	noble = yes
+	culture = cu:japanese
+	birth_date = 1828.10.13
+	dna = dna_yoshiyori_tokugawa
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_TOKAI
+	on_created = {
+		set_variable = house_tokugawa
+	}
+	traits = {
+		scarred
+		compliant
+	}
+}
+
+REPLACE_OR_CREATE:JAP_iemochi_tokugawa = {
+	first_name = Yoshitomi # Later Iemochi
+	last_name = Tokugawa
+	historical = yes
+	noble = yes
+	culture = cu:japanese
+	birth_date = 1836.7.16
+	dna = dna_iemochi_tokugawa
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	home_region = STATE_KANSAI
+	role = character_role_magnate
+	holding_type = building_manor_house
+	on_created = {
+		set_variable = house_tokugawa
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = japan_daimyo_abolished
+				}
+			}
+			set_variable = { name = daimyo_var value = s:STATE_KANSAI }
+		}
+		designate_as_shinpan_daimyo = yes
+	}
+	trait_generation = {
+		add_trait = sickly
+		if = {
+			limit = {
+				game_date <= 1852.1.1
+			}
+			add_trait = trait_child
+		}
+		else = {
+			add_trait = romantic
+			add_trait = innovative
+		}
+	}
+}
+
+REPLACE_OR_CREATE:JAP_yoshinobu_tokugawa = {
+	first_name = Yoshinobu
+	last_name = Tokugawa
+	historical = yes
+	noble = yes
+	culture = cu:japanese
+	birth_date = 1838.10.28
+	dna = dna_yoshinobu_tokugawa
+	interest_group = ig_landowners
+	ideology = ideology_modernizer_leader
+	home_region = STATE_KANTO
+	on_created = {
+		set_variable = house_tokugawa
+	}
+	trait_generation = {
+		if = {
+			limit = {
+				game_date <= 1854.10.28
+			}
+			add_trait = trait_child
+		}
+		else = {
+			add_trait = ambitious
+			add_trait = experienced_diplomat
+		}
+	}
+}

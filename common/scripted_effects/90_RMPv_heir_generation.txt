@@ -1,0 +1,144 @@
+﻿REPLACE_OR_CREATE:japan_generate_scripted_heirs = {
+	if = {
+		limit = {
+			ruler = {
+				has_variable = house_yamato
+			}
+		}
+		if = {
+			limit = {
+				game_date >= 1831.7.22
+				NOT = { has_variable = heir_komei_spawned }
+				ruler ?= {
+					has_template = JAP_ninko_yamato
+				}
+			}
+			set_variable = heir_komei_spawned
+			create_character = {
+				template = JAP_komei_yamato
+				on_created = {
+					replace_character_roles = { add = { heir } remove_all = yes }
+				}
+			}
+		}
+		if = {
+			limit = {
+				game_date >= 1840.11.3
+				NOT = { has_variable = heir_meiji_spawned }
+				ruler ?= {
+					has_template = JAP_komei_yamato
+				}
+			}
+			set_variable = heir_meiji_spawned
+			create_character = {
+				template = JAP_meiji_yamato
+				on_created = {
+					replace_character_roles = { add = { heir } remove_all = yes }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				game_date >= 1870.8.31
+				NOT = { has_variable = heir_taisho_spawned }
+				ruler ?= {
+					has_template = JAP_meiji_yamato
+				}
+			}
+			set_variable = heir_taisho_spawned
+			create_character = {
+				template = JAP_taisho_yamato
+				on_created = {
+					replace_character_roles = { add = { heir } remove_all = yes }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				game_date >= 1901.4.29
+				NOT = { has_variable = heir_showa_spawned }
+				ruler ?= {
+					has_template = JAP_taisho_yamato
+				}
+			}
+			set_variable = heir_showa_spawned
+			create_character = {
+				template = JAP_showa_yamato
+				on_created = {
+					replace_character_roles = { add = { heir } remove_all = yes }
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ruler = {
+				has_variable = house_tokugawa
+			}
+		}
+		if = {
+			limit = {
+				NOT = { is_template_used = JAP_iesada_tokugawa }
+				ruler ?= {
+					has_template = JAP_ieyoshi_tokugawa
+				}
+			}
+			create_character = {
+				template = JAP_iesada_tokugawa
+				on_created = {
+					add_character_role = heir
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_dlc_feature = ep2_content } # Iesada's heir is handled by event in EP2
+				game_date >= 1836.7.16
+				NOT = { is_template_used = JAP_iemochi_tokugawa }
+				ruler ?= {
+					has_template = JAP_iesada_tokugawa
+				}
+			}
+			create_character = {
+				template = JAP_iemochi_tokugawa
+				on_created = {
+					add_character_role = heir
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				game_date >= 1839.1.1
+				game_date < 1879.8.24
+				NOT = { is_template_used = JAP_yoshinobu_tokugawa }
+				ruler ?= {
+					has_template = JAP_iemochi_tokugawa
+				}
+			}
+			create_character = {
+				template = JAP_yoshinobu_tokugawa
+				on_created = {
+					add_character_role = heir
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				game_date >= 1879.8.24 # Date of majority
+				NOT = { is_template_used = JAP_iesato_tokugawa }
+				ruler ?= {
+					OR = {
+						has_template = JAP_iemochi_tokugawa
+						has_template = JAP_yoshinobu_tokugawa
+					}
+				}
+			}
+			create_character = {
+				template = JAP_iesato_tokugawa
+				on_created = {
+					add_character_role = heir
+				}
+			}
+		}
+	}
+}
