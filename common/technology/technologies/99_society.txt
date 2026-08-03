@@ -1,0 +1,234 @@
+﻿REPLACE_OR_CREATE:corporate_charters = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/corporate_charters.dds"
+	category = society
+
+	modifier = {
+		country_max_companies_add = 1
+		country_free_charters_add = 2
+		state_capitalists_investment_pool_contribution_add = 0.05 # +5% from stat 
+		state_aristocrats_investment_pool_contribution_add = 0.05 # +5% from stat
+	}
+
+	unlocking_technologies = {
+		stock_exchange
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+REPLACE_OR_CREATE:banking = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/banking.dds"
+	category = society
+
+	modifier = {
+		country_minting_mult = 0.1
+		country_loan_interest_rate_add = -0.02
+		state_max_trade_advantage_from_capacity_add = 0.05
+		state_capitalists_investment_pool_contribution_add = 0.05 # +5% change from static 
+	}
+
+	unlocking_technologies = {
+		currency_standards
+	}
+
+	ai_weight = {
+		value = 1.5 # Important in general
+	}
+}
+
+REPLACE_OR_CREATE:joint_stock_companies = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/joint_stock_companies.dds"
+	category = society
+
+	modifier = {
+		country_max_companies_add = 1
+		state_urbanization_per_level_mult = -0.1
+		state_capitalists_investment_pool_contribution_add = 0.05 # +5% from stat 
+		state_aristocrats_investment_pool_contribution_add = 0.05 # +5% from stat
+	}
+
+	unlocking_technologies = {
+		banking
+		corporate_charters
+	}
+
+	ai_weight = {
+		value = 2 # important tech
+	}
+}
+
+REPLACE_OR_CREATE:postal_savings = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/postal_savings.dds"
+	category = society
+
+	modifier = {
+		building_cash_reserves_mult = 0.1
+		state_capitalists_investment_pool_contribution_add = 0.05 # 5% from stat
+		state_aristocrats_investment_pool_contribution_add = 0.05 # 5% from stat
+	}
+
+	unlocking_technologies = {
+		stock_exchange
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:steel_frame_buildings = {
+	# Unlocks Covered Markets PM in Urban Centers
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/steel_frame_buildings.dds"
+	category = society
+	modifier = {
+		state_infrastructure_from_population_add = 1
+		state_infrastructure_from_population_max_add = 20
+		state_building_construction_sector_max_level_add = 5
+		country_max_weekly_construction_progress_add = 5
+		state_harvest_condition_flood_impact_mult = -0.05
+		state_colony_growth_creation_factor = 0.05		#added 0.05 to colony growth creation factor
+	}
+
+	unlocking_technologies = {
+		modern_sewerage
+	}
+
+	ai_weight = {
+		value = 2 # Important in general
+	}
+}
+
+REPLACE_OR_CREATE:civilizing_mission = {
+	# Unlocks Panama Canal survey expedition decision
+	# Unlocks the Panama Canal
+
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/civilizing_mission.dds"
+	category = society
+
+	modifier = {
+		country_institution_colonial_affairs_max_investment_add = 1
+		country_infamy_generation_against_unrecognized_mult = -0.25
+		state_colony_growth_creation_factor = 0.05 			#added 0.05 to colony growth creation factor
+	}
+
+	unlocking_technologies = {
+		quinine
+		nationalism
+	}
+
+	ai_weight = {
+		value = 1
+
+		# Important for colonizers
+		if = {
+			limit = {
+				navy_size >= 25
+				is_country_type = recognized
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				has_strategy = ai_strategy_colonial_expansion
+			}
+			add = 1
+		}
+	}
+}
+
+REPLACE_OR_CREATE:investment_banks = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/investment_banks.dds"
+	category = society
+
+	modifier = {
+		country_max_companies_add = 1
+		country_free_charters_add = 1
+		state_urbanization_per_level_mult = -0.15
+		state_capitalists_investment_pool_contribution_add = 0.05 # 5% from stat
+		state_aristocrats_investment_pool_contribution_add = 0.05 # 5% from stat
+	}
+
+	unlocking_technologies = {
+		joint_stock_companies
+		mutual_funds
+	}
+
+	ai_weight = {
+		value = 2 # important tech
+	}
+}
+
+REPLACE_OR_CREATE:philosophical_pragmatism = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/philosophical_pragmatism.dds"
+	category = society
+
+	modifier = {
+		country_influence_mult = 0.25
+		country_diplomatic_play_maneuvers_mult = 0.25
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+		state_literacy_growth_add = 0.0001
+		state_colony_growth_creation_factor = 0.05		#added 0.05 to colony growth creation factor
+	}
+
+	unlocking_technologies = {
+		psychiatry
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:identification_documents = {
+	# Unlocks Identification Documents PM in Government Administrations
+	# Unlocks Closed Borders Law in Migration
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/identification_documents.dds"
+	category = society
+
+	modifier = {
+		state_tax_capacity_add = 25
+		country_institution_home_affairs_max_investment_add = 1
+		state_incorporation_speed_mult = 0.05
+		state_colony_growth_creation_factor = 0.05		#added 0.05 to colony growth creation factor
+	}
+
+	unlocking_technologies = {
+		central_archives
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:corporate_management = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/corporate_management.dds"
+	category = society
+
+	modifier = {
+		country_max_companies_add = 1
+		state_urbanization_per_level_mult = -0.25
+		state_capitalists_investment_pool_contribution_add = 0.05 # 5% from stat
+		state_aristocrats_investment_pool_contribution_add = 0.05 # 5% from stat
+	}
+
+	unlocking_technologies = {
+		investment_banks
+	}
+
+	ai_weight = {
+		value = 2 # important tech
+	}
+}

@@ -1,0 +1,105 @@
+﻿REPLACE_OR_CREATE:logistics = {
+	# increases number of conscriptable battalions
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/logistics_tech.dds"
+	category = military
+
+	modifier = {
+		state_conscription_rate_mult = 0.2
+		country_general_rank_impact_mult = 0.2
+	}
+
+	unlocking_technologies = {
+		napoleonic_warfare
+		army_reserves
+	}
+
+	ai_weight = {
+		value = 1
+
+		if = {
+			limit = {
+				has_strategy = ai_strategy_unify_germany
+			}
+			add = 8
+		}
+
+		if = {
+			limit = {
+				has_journal_entry = je_patagonia
+			}
+			add = 5
+		}
+	}
+}
+
+REPLACE_OR_CREATE:military_statistics = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/military_statistics.dds"
+	category = military
+
+
+	modifier = {
+		military_formation_organization_gain_mult = 0.2
+		state_colony_growth_creation_factor = 0.05			#added 0.05 colony growth creation factor to military_statistics tech
+	}
+	
+
+	unlocking_technologies = {
+		electric_telegraph
+		general_staff
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:ironclad_tech = {
+	# Unlocks Metal Shipbuilding PM in Shipyards
+	# Unlocks Ironclads PM in Naval Base
+	# Unlocks Steam Trawlers PM in Fishing Wharves
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/ironclad_tech.dds"
+	category = military
+	modifier = {
+		state_colony_growth_creation_factor = 0.05		#added 0.05 colony growth creation factor to ironclad_tech tech
+	}
+
+	unlocking_technologies = {
+		screw_frigate
+	}
+
+	ai_weight = {
+		value = 1
+
+		# Very Important for naval powers
+		if = {
+			limit = { navy_size >= 20 }
+			add = 2
+		}
+	}
+}
+
+REPLACE_OR_CREATE:floating_harbor = {
+	# Unlocks Industrial Port PM in Ports
+	# Increases Port Level by 4
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/floating_harbor.dds"
+	category = military
+
+	unlocking_technologies = {
+		gantry_cranes
+	}
+
+	ai_weight = {
+		value = 1
+
+		# Important for anyone with a navy
+		if = {
+			limit = { navy_size >= 5 }
+			add = 0.5
+		}
+	}
+}
+
