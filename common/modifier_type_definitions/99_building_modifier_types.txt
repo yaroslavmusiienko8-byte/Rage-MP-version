@@ -1,0 +1,5 @@
+﻿REPLACE_OR_CREATE:state_building_university_max_level_add={
+	color=good
+	percent=no
+	decimals=0
+}

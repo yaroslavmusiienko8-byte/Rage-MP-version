@@ -1,0 +1,18 @@
+﻿
+REPLACE_OR_CREATE:interest_tier_observant = {
+	icon = "gfx/interface/icons/tiered_interests/interest_levels_icons/interest_level_1_observant.dds"
+	small_icon = "gfx/interface/icons/tiered_interests/interest_levels_icons/interest_level_1_observant_small.dds"
+
+	rank = 1
+	trade_advantage_exports = 0
+	trade_advantage_imports = 0
+	leverage_generation_mult = -0.25
+	min_involvement = 100
+	max_involvement = 1000
+	colonization = yes 			#allows colonization at tier 1 involvment into region (balance for countries which doesnt have a fleet)
+
+	on_activate = {
+		custom_tooltip_no_bullet = interest_tier_effect_infamy_cost_increase_high
+	}
+}
+

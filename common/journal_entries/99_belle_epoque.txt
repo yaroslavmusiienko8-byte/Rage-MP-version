@@ -1,4 +1,4 @@
-﻿je_belle_epoque = {
+﻿REPLACE_OR_CREATE:je_belle_epoque = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
 	group = je_group_crises

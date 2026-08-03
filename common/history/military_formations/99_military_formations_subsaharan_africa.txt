@@ -1,4 +1,4 @@
-﻿MILITARY_FORMATIONS = {
+﻿REPLACE_OR_CREATE:MILITARY_FORMATIONS = {
 	c:SAF ?= {
 		create_military_formation = {
 			type = army
