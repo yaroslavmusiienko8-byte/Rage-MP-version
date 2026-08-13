@@ -232,3 +232,105 @@ REPLACE_OR_CREATE:corporate_management = {
 		value = 2 # important tech
 	}
 }
+
+REPLACE_OR_CREATE:pharmaceuticals = {
+	# Increases the ratio of pop casualties that survive a battle
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/pharmaceuticals.dds"
+	category = society
+
+	modifier = {
+		country_institution_health_system_max_investment_add = 1
+		state_harvest_condition_disease_outbreak_impact_mult = -0.05
+	}
+
+	unlocking_technologies = {
+		medical_degrees
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:antibiotics = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/antibiotics.dds"
+	category = society
+
+	modifier = {
+		country_institution_health_system_max_investment_add = 1
+		state_harvest_condition_disease_outbreak_impact_mult = -0.1
+	}
+
+	unlocking_technologies = {
+		malaria_prevention
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+INJECT_OR_CREATE:conservationist_movement = {
+	# Unlocks first tier of Ecological Regulations
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/conservation.dds"
+	category = society
+	modifier = {
+        country_institution_ecology_regulations_max_investment_add = 2
+		state_harvest_condition_disease_outbreak_impact_mult = -0.1
+	}
+
+	unlocking_technologies = {
+		pharmaceuticals
+        modern_sewerage
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+INJECT_OR_CREATE:ecology = {
+	# Unlocks second tier of Ecological Regulations
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/evolution.dds"
+	category = society
+	modifier = {
+        country_institution_ecology_regulations_max_investment_add = 1
+		state_harvest_condition_disease_outbreak_impact_mult = -0.15
+	}
+
+	unlocking_technologies = {
+		philosophical_pragmatism
+        human_rights
+		conservationist_movement
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+
+INJECT_OR_CREATE:modern_pollution_regulations = {
+	# Unlocks final tier of Ecological regulations
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/pollution.dds"
+	category = society
+	modifier = {
+        country_institution_ecology_regulations_max_investment_add = 2
+		state_harvest_condition_disease_outbreak_impact_mult = -0.1
+	}
+
+	unlocking_technologies = {
+		malaria_prevention
+        central_planning
+		ecology
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
