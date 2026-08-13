@@ -1,0 +1,39 @@
+INJECT:ideology_laissez_faire = {
+
+    lawgroup_ecology_regulations = {
+        law_heavy_industrial_regulations = strongly_disapprove
+        law_light_industrial_regulations = disapprove
+        law_no_regulations = approve
+    }
+
+}
+
+INJECT:ideology_agrarian = {
+
+   lawgroup_ecology_regulations = {
+        law_heavy_industrial_regulations = strongly_approve
+        law_light_industrial_regulations = approve
+        law_no_regulations = disapprove
+    }
+
+}
+
+INJECT:ideology_proletarian = {
+
+   lawgroup_ecology_regulations = {
+        law_heavy_industrial_regulations = strongly_approve
+        law_light_industrial_regulations = approve
+        law_no_regulations = neutral
+    }
+
+}
+
+INJECT:ideology_socialist = {
+
+    lawgroup_ecology_regulations = {
+        law_heavy_industrial_regulations = approve
+        law_light_industrial_regulations = approve
+        law_no_regulations = neutral
+    }
+
+}

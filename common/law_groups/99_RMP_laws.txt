@@ -1,0 +1,4 @@
+INJECT_OR_CREATE:lawgroup_ecology_regulations = {
+	law_group_category = economy
+	ideological_opinion_impact = 0.1
+}

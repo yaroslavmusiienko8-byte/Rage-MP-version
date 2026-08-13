@@ -1,0 +1,7 @@
+﻿INJECT_OR_CREATE:country_institution_ecology_regulations_max_investment_add={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}

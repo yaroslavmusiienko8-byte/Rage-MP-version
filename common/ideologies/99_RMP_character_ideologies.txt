@@ -1,0 +1,79 @@
+INJECT:ideology_luddite = { # Average Progressiveness - -50
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/luddite.dds"
+
+	character_ideology = yes
+
+	lawgroup_ecology_regulations = {
+        law_heavy_industrial_regulations = strongly_approve
+        law_light_industrial_regulations = approve
+        law_no_regulations = strongly_disapprove
+    }
+}
+
+INJECT:ideology_humanitarian = { # Average Progressiveness - 66.66
+
+	character_ideology = yes
+
+    lawgroup_ecology_regulations = {
+        law_heavy_industrial_regulations = strongly_approve
+        law_light_industrial_regulations = approve
+        law_no_regulations = disapprove
+    }
+
+}
+
+INJECT:ideology_humanitarian_royalist = { # Average Progressiveness - 55
+
+	character_ideology = yes
+
+    lawgroup_ecology_regulations = {
+        law_heavy_industrial_regulations = strongly_approve
+        law_light_industrial_regulations = approve
+        law_no_regulations = disapprove
+    }
+   
+}
+
+INJECT:ideology_utilitarian_leader = { # Average Progressiveness - 54.16
+	character_ideology = yes
+
+    lawgroup_ecology_regulations = {
+        law_heavy_industrial_regulations = strongly_approve
+        law_light_industrial_regulations = approve
+        law_no_regulations = disapprove
+    }
+
+}
+
+INJECT:ideology_utopian = { # Average Progressiveness - 101.38
+    character_ideology = yes
+
+    lawgroup_ecology_regulations = {
+        law_heavy_industrial_regulations = strongly_approve
+        law_light_industrial_regulations = approve
+        law_no_regulations = disapprove
+    }
+
+}
+
+INJECT:ideology_market_liberal = { # Average Progressiveness - 101.38
+    character_ideology = yes
+
+    lawgroup_ecology_regulations = {
+        law_heavy_industrial_regulations = strongly_disapprove
+        law_light_industrial_regulations = disapprove
+        law_no_regulations = approve
+    }
+
+}
+
+INJECT:ideology_social_democrat = { # Average Progressiveness - 67.85
+	character_ideology = yes
+
+     lawgroup_ecology_regulations = {
+        law_heavy_industrial_regulations = approve
+        law_light_industrial_regulations = approve
+        law_no_regulations = disapprove
+    }
+
+}
