@@ -1,0 +1,4 @@
+﻿INJECT_OR_CREATE:institution_ecology_regulations = {
+	icon = "gfx/interface/icons/institution_icons/environmental_regulations.dds"
+	background_texture = "gfx/interface/illustrations/institutions/health_service.dds"
+}
